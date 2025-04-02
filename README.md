@@ -85,6 +85,32 @@ Option	Description
 
 ---
 
+⚠️ WSL Users: tcgetpgrp failed: Not a tty message
+If you're running PersonScope on WSL (Windows Subsystem for Linux), you might see the following message in your terminal after running a search:
+    tcgetpgrp failed: Not a tty
+
+This is not an error, and it does not affect the tool's functionality. It's a harmless system message related to how WSL handles terminal sessions when opening multiple browser tabs.
+💡 Want to hide it?
+
+There are two simple ways:
+
+1. Redirect the error output when running the command:
+personscope -n "John Doe" -g 2>/dev/null
+
+2. Create a shell alias to always hide the message:
+
+Add this line to your ~/.bashrc (or ~/.zshrc if using Zsh):
+alias personscope='personscope "$@" 2>/dev/null'
+
+Then reload your shell with:
+source ~/.bashrc
+# or
+source ~/.zshrc
+
+This will make the message disappear automatically every time you use the tool.
+
+---
+
 👨💻 Author
 
 Created with passion by **Dudditz**  

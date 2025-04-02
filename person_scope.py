@@ -60,10 +60,8 @@ def save_output(dorks, output_name):
     output_base = Path(f"{output_name}_{now}")
     with open(output_base.with_suffix(".txt"), 'w', encoding='utf-8') as f_txt:
         for label, query in dorks.items():
-            f_txt.write(f"{label}:
-{query}
+            f_txt.write(f"{label}:\n{query}\n\n")
 
-")
     with open(output_base.with_suffix(".json"), 'w', encoding='utf-8') as f_json:
         json.dump(dorks, f_json, indent=4)
     console.print(f"\n[bold green]Saved TXT:[/bold green] {output_base}.txt")
