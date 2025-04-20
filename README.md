@@ -28,8 +28,8 @@ and opens them in your browser using multiple search engines like Google, DuckDu
 ### Basic
 
 ```bash
-git clone https://github.com/yourusername/personscope.git
-cd personscope
+git clone https://github.com/edsonsoaresramos/PersonScope.git
+cd PersonScope
 pip install -r requirements.txt
 
 ---
